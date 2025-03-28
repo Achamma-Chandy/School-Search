@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Details</title>
+</head>
+<body>
+    <h1>School Details</h1>
+    {% if schools %}
+        <ul>
+        {% for school in schools %}
+            <li>
+                <strong>Name:</strong> {{ school.school_name }}<br>
+                <strong>Address:</strong> {{ school.address }}<br>
+                <strong>Mrt:</strong> {{ school.mrt_desc }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No schools found with the given name.</p>
+    {% endif %}
+    <a href="/">Search Again</a>
+</body>
+</html>
